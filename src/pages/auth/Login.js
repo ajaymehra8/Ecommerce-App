@@ -19,7 +19,7 @@ const location=useLocation();
 const handleSubmit=async(e)=>{
     e.preventDefault();
     try{
-    const res= await axios.post(`https://ecommerce-api-liard.vercel.app/api/v1/auth/login`,
+    const res= await axios.post(`https://ecommerce-api-bay-three.vercel.app/api/v1/auth/login`,
     {email,password});
     if(res.data.success){
       

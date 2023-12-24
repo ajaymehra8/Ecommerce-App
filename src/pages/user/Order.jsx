@@ -11,7 +11,7 @@ const Order = () => {
 
   const getOrders=async()=>{
 try{
-const {data}=await axios.get("https://ecommerce-api-liard.vercel.app/api/v1/auth/orders");
+const {data}=await axios.get("https://ecommerce-api-bay-three.vercel.app/api/v1/auth/orders");
 setOrders(data);
 }catch(err){
   console.log(err);
@@ -41,7 +41,7 @@ setOrders(data);
               <div className="row mb-2 card flex-row p-3" style={{zIndex:"0"}}>
                 <div className="col-md-4">
                   <img
-                    src={`https://ecommerce-api-liard.vercel.app/api/v1/products/product-photo/${p._id}`}
+                    src={`https://ecommerce-api-bay-three.vercel.app/api/v1/products/product-photo/${p._id}`}
                  className="card-img-top"
                     alt="..."
                     width={"60px"}

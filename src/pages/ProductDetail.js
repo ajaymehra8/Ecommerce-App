@@ -18,7 +18,7 @@ const ProductDetail = () => {
 
     const getRelatedProduct=async(pid,cid)=>{
         try{
-const {data}=await axios.get(`https://ecommerce-api-liard.vercel.app/api/v1/products/related-product/${pid}/${cid}`);
+const {data}=await axios.get(`https://ecommerce-api-bay-three.vercel.app/api/v1/products/related-product/${pid}/${cid}`);
 setRelatedProduct(data?.products);
         }catch(error){
             console.log(error);
@@ -29,7 +29,7 @@ setRelatedProduct(data?.products);
 
     const getProduct=async()=>{
         try{
-const {data}=await axios.get(`https://ecommerce-api-liard.vercel.app/api/v1/products/getSingle-product/${params.slug}`);
+const {data}=await axios.get(`https://ecommerce-api-bay-three.vercel.app/api/v1/products/getSingle-product/${params.slug}`);
 setProduct(data?.product);
 getRelatedProduct(data?.product._id,data?.product.category);
 
@@ -46,7 +46,7 @@ getRelatedProduct(data?.product._id,data?.product.category);
         <div className='row mt-2'>
       <div className='col-md-6'>
       <img
-                    src={`https://ecommerce-api-liard.vercel.app/api/v1/products/product-photo/${product._id}`}
+                    src={`https://ecommerce-api-bay-three.vercel.app/api/v1/products/product-photo/${product._id}`}
                     className="card-img-top"
                     alt="..."
                     height={"400vh"}
@@ -75,7 +75,7 @@ getRelatedProduct(data?.product._id,data?.product.category);
               <>
                 <div className="card m-2" style={{ width: "18rem" }}>
                   <img
-                    src={`https://ecommerce-api-liard.vercel.app/api/v1/products/product-photo/${p._id}`}
+                    src={`https://ecommerce-api-bay-three.vercel.app/api/v1/products/product-photo/${p._id}`}
                     className="card-img-top cardsImg"
                     alt="..."
                   />

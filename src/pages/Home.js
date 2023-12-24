@@ -24,7 +24,7 @@ const Home = () => {
   const getAllCategory = async () => {
     try {
       const { data } = await axios.get(
-        "https://ecommerce-api-liard.vercel.app/api/v1/category/categories"
+        "https://ecommerce-api-bay-three.vercel.app/api/v1/category/categories"
       );
 console.log(data);
       if (data?.success) {
@@ -40,7 +40,7 @@ console.log(data);
   const getTotal = async () => {
     try {
       const { data } = await axios.get(
-        "https://ecommerce-api-liard.vercel.app/api/v1/products/product-count"
+        "https://ecommerce-api-bay-three.vercel.app/api/v1/products/product-count"
       );
       setTotal(data?.total);
     } catch (err) {
@@ -52,7 +52,7 @@ console.log(data);
     try {
       setLoad(true);
       const { data } = await axios.get(
-        `https://ecommerce-api-liard.vercel.app/api/v1/products/product-list/${page}`
+        `https://ecommerce-api-bay-three.vercel.app/api/v1/products/product-list/${page}`
       );
       setLoad(false);
 
@@ -73,7 +73,7 @@ console.log(data);
       console.log("handledLoad:", page);
       setLoad(true);
       const { data } = await axios.get(
-        `https://ecommerce-api-liard.vercel.app/api/v1/products/product-list/${page}`
+        `https://ecommerce-api-bay-three.vercel.app/api/v1/products/product-list/${page}`
       );
       setLoad(false);
       console.log(data); // Log the data received from the server
@@ -116,7 +116,7 @@ console.log(data);
   const filterProduct = async () => {
     try {
       const { data } = await axios.post(
-        "https://ecommerce-api-liard.vercel.app/api/v1/products/filter-products",
+        "https://ecommerce-api-bay-three.vercel.app/api/v1/products/filter-products",
         {
           check,
           radio,
@@ -192,7 +192,7 @@ console.log(data);
               <>
                 <div className="card m-2 homeCards" style={{ width: "18rem" }}>
                   <img
-                    src={`https://ecommerce-api-liard.vercel.app/api/v1/products/product-photo/${p._id}`}
+                    src={`https://ecommerce-api-bay-three.vercel.app/api/v1/products/product-photo/${p._id}`}
                     className="card-img-top cardsImg"
                     
                     alt="..."

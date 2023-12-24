@@ -19,7 +19,7 @@ const navigate=useNavigate();
 const handleSubmit=async(e)=>{
 e.preventDefault();
 try{
-const res= await axios.post(`https://ecommerce-api-liard.vercel.app/api/v1/auth/register`,
+const res= await axios.post(`https://ecommerce-api-bay-three.vercel.app/api/v1/auth/register`,
 {name,email,password,phone,address,question});
 if(res.data.success){
   

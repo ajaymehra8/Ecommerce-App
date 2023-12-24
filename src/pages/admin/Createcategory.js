@@ -21,7 +21,7 @@ const Createcategory = () => {
     try {
       console.log("'hello");
       const { data } = await axios.post(
-        "https://ecommerce-api-liard.vercel.app/api/v1/category/create-category",
+        "https://ecommerce-api-bay-three.vercel.app/api/v1/category/create-category",
         { name },
         {
           headers: {
@@ -46,7 +46,7 @@ const Createcategory = () => {
   //get all cat
   const getAllCategory = async () => {
     try {
-      const { data } = await axios.get("https://ecommerce-api-liard.vercel.app/api/v1/category/categories");
+      const { data } = await axios.get("https://ecommerce-api-bay-three.vercel.app/api/v1/category/categories");
       console.log(data);
       if (data?.success) {
         setCategories(data?.category);
@@ -67,7 +67,7 @@ const Createcategory = () => {
     e.preventDefault();
     try {
       const res = await axios.put(
-        `https://ecommerce-api-liard.vercel.app/api/v1/category/update-category/${selected._id}`,
+        `https://ecommerce-api-bay-three.vercel.app/api/v1/category/update-category/${selected._id}`,
         { name: updatedName }, {
           headers: {
             Authorization: auth[0]?.token, // Assuming your JWT is stored in auth.token
@@ -96,7 +96,7 @@ const Createcategory = () => {
 const handleDelete = async (id) => {
   try {
     const res = await axios.delete(
-      `https://ecommerce-api-liard.vercel.app/api/v1/category/delete-category/${id}`, {
+      `https://ecommerce-api-bay-three.vercel.app/api/v1/category/delete-category/${id}`, {
         headers: {
           Authorization: auth[0]?.token, // Assuming your JWT is stored in auth.token
           // Include any other headers you need
