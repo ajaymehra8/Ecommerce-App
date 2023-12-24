@@ -27,5 +27,5 @@ if(res.data.ok){
   }
 },[auth?.token]);
 
-return ok?<Outlet/>:<Spinner/>
+return res.data.ok?<Outlet/>:<Spinner/>
 }
