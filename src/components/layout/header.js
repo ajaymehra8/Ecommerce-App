@@ -26,6 +26,9 @@ const Header = () => {
     <>
       <nav className="navbar navbar-expand-lg navbar-light bg-light myNavbar">
         <div className="container-fluid">
+        <Link className="navbar-brand" to="/">
+              🛒 Ecommerce App
+            </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -37,9 +40,7 @@ const Header = () => {
           >
             <span className="navbar-toggler-icon"></span>
           </button>
-          <Link className="navbar-brand" to="/">
-              🛒 Ecommerce App
-            </Link>
+        
           <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
             
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0 navLists">
