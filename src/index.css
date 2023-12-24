@@ -6,7 +6,7 @@
 
 body{
   box-sizing: border-box;
-  /* overflow-x:hidden; */
+  overflow-x:hidden;
   position: relative;
   min-height: 100vh;
 }
@@ -352,7 +352,7 @@ backface-visibility: hidden;
   background-color:#ced5df;
 }
   .updateProfileForm form {
-    width: clamp(200px,60vw,800px);
+    width: clamp(300px,60vw,800px);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     padding: 20px;
     background-color: #fff;
@@ -391,3 +391,7 @@ border: 1px solid #000;
     color: #2c496f;
     font-weight: 700;
   }
+  @media(max-width:500px){
+  .ptb{
+    padding-top: 30px;
+  }}

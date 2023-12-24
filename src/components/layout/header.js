@@ -37,19 +37,20 @@ const Header = () => {
           >
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
-            <Link className="navbar-brand" to="/">
+          <Link className="navbar-brand" to="/">
               🛒 Ecommerce App
             </Link>
+          <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
+            
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0 navLists">
-              <SearchInput />
-              <li className="nav-item">
+              <li className="ptb"><SearchInput /></li>
+              <li className="nav-item ptb">
                 <NavLink className="nav-link" aria-current="page" to="/">
                   Home
                 </NavLink>
               </li>
 
-              <li className="nav-item dropdown">
+              <li className="nav-item dropdown ptb">
                 <Link
                   className="nav-link dropdown-toggle"
                   to="/categories"
@@ -62,7 +63,7 @@ const Header = () => {
                 <ul className="dropdown-menu">
                 
                   {category?.map((c) => (
-                    <li key={c.id}>
+                    <li key={c.id} className="ptb">
                       <Link className="dropdown-item" to={`/category/${c.slug}`}>
                         {c.name}
                       </Link>
@@ -74,11 +75,11 @@ const Header = () => {
               {!auth.user ? (
                 <>
                   <li className="nav-item">
-                    <NavLink className="nav-link" to="/register">
+                    <NavLink className="nav-link ptb" to="/register">
                       Sign up
                     </NavLink>
                   </li>
-                  <li className="nav-item">
+                  <li className="nav-item ptb">
                     <NavLink className="nav-link" to="/login">
                       Log in
                     </NavLink>
@@ -125,14 +126,14 @@ const Header = () => {
                   </li>
                 </>
               )}
-              <li className="nav-item" style={{ display: 'flex', alignItems: 'center' }}>
+              <li className="nav-item ptb" style={{ display: 'flex', alignItems: 'center' }}>
                 <Badge count={cart?.length} showZero>
                 <NavLink className="nav-link" to="/cart">
                   Cart
                 </NavLink>
                 </Badge>
                
-              </li>
+               </li>
             </ul>
           </div>
         </div>
