@@ -30,7 +30,7 @@ useEffect(() => {
 const handleSubmit = async (e) => {
   e.preventDefault();
   try {
-    const { data } = await axios.put("https://ecommerce-api-liard.vercel.app/api/v1/auth/profile", {
+    const { data } = await axios.put("https://ecommerce-api-bay-three.vercel.app/api/v1/auth/profile", {
       name,
       email,
       password,

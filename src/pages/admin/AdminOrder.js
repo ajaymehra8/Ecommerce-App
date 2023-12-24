@@ -22,7 +22,7 @@ const AdminOrder = () => {
   const getOrders = async () => {
     try {
       const { data } = await axios.get(
-        "https://ecommerce-api-liard.vercel.app/api/v1/auth/all-orders"
+        "https://ecommerce-api-bay-three.vercel.app/api/v1/auth/all-orders"
       );
       console.log(data);
       setOrders(data);
@@ -37,7 +37,7 @@ const AdminOrder = () => {
   const handleChange = async (orderId, value) => {
     try {
       const { data } = await axios.put(
-        `https://ecommerce-api-liard.vercel.app/api/v1/auth/order-status/${orderId}`,
+        `https://ecommerce-api-bay-three.vercel.app/api/v1/auth/order-status/${orderId}`,
         { status: value }
       );
       getOrders();

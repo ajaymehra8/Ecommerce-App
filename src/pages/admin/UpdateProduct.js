@@ -26,7 +26,7 @@ const UpdateProduct = () => {
   const getSingleProduct = async () => {
     try {
       const { data } = await axios.get(
-        `https://ecommerce-api-liard.vercel.app/api/v1/products/getSingle-product/${params.slug}`
+        `https://ecommerce-api-bay-three.vercel.app/api/v1/products/getSingle-product/${params.slug}`
       );
       setName(data.product.name);
       setId(data.product._id);
@@ -47,7 +47,7 @@ const UpdateProduct = () => {
   //get all category
   const getAllCategory = async () => {
     try {
-      const { data } = await axios.get("https://ecommerce-api-liard.vercel.app/api/v1/category/categories");
+      const { data } = await axios.get("https://ecommerce-api-bay-three.vercel.app/api/v1/category/categories");
       if (data?.success) {
         setCategories(data?.category);
       }
@@ -74,7 +74,7 @@ const UpdateProduct = () => {
       productData.append("category", category);
 
       const { data } = axios.put(
-        `https://ecommerce-api-liard.vercel.app/api/v1/products/update-product/${id}`,
+        `https://ecommerce-api-bay-three.vercel.app/api/v1/products/update-product/${id}`,
         productData, {
           headers: {
             Authorization: auth[0]?.token, // Assuming your JWT is stored in auth.token
@@ -101,7 +101,7 @@ const UpdateProduct = () => {
       let answer = window.prompt("Are You Sure want to delete this product ? ");
       if (!answer) return;
       const { data } = await axios.delete(
-        `https://ecommerce-api-liard.vercel.app/api/v1/products/product-delete/${id}`,{
+        `https://ecommerce-api-bay-three.vercel.app/api/v1/products/product-delete/${id}`,{
           headers: {
             Authorization: auth[0]?.token, // Assuming your JWT is stored in auth.token
             // Include any other headers you need
@@ -168,7 +168,7 @@ const UpdateProduct = () => {
                 ) : (
                   <div className="text-center">
                     <img
-                      src={`https://ecommerce-api-liard.vercel.app/api/v1/products/product-photo/${id}`}
+                      src={`https://ecommerce-api-bay-three.vercel.app/api/v1/products/product-photo/${id}`}
                       alt="product_photo"
                       height={"200px"}
                       className="img img-responsive"

@@ -14,7 +14,7 @@ const [products,setProducts]=useState([]);
     //get all products
 const getAllProduct=async()=>{
     try{
-const {data}=await axios.get("https://ecommerce-api-liard.vercel.app/api/v1/products/get-product");
+const {data}=await axios.get("https://ecommerce-api-bay-three.vercel.app/api/v1/products/get-product");
 console.log(data);
 setProducts(data.product);
     }catch(error){
@@ -43,7 +43,7 @@ getAllProduct();
             {products?.map(p=>(<>
             <Link key={p._id} to={`/dashboard/admin/products/product/${p.slug}`} className="product-link">
                 <div className="card m-2" style={{width:"18rem"}} >
-  <img src={`https://ecommerce-api-liard.vercel.app/api/v1/products/product-photo/${p._id}`} className="card-img-top cardsImg" alt="..."/>
+  <img src={`https://ecommerce-api-bay-three.vercel.app/api/v1/products/product-photo/${p._id}`} className="card-img-top cardsImg" alt="..."/>
   <div className="card-body">
     <h5 className="card-title">{p.name}</h5>
     <p className="card-text">{p.description}</p>

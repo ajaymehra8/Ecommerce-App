@@ -14,7 +14,7 @@ const CategoryProduct = () => {
 
   const getProductByCat=async()=>{
     try{
-const {data}=await axios.get(`https://ecommerce-api-liard.vercel.app/api/v1/products/product-category/${params.slug}`);
+const {data}=await axios.get(`https://ecommerce-api-bay-three.vercel.app/api/v1/products/product-category/${params.slug}`);
 
 setProduct(data?.product);
 setCategory(data?.category);
@@ -35,7 +35,7 @@ setCategory(data?.category);
               <>
                 <div className="card m-2 homeCards" style={{ width: "18rem" }}>
                   <img
-                    src={`https://ecommerce-api-liard.vercel.app/api/v1/products/product-photo/${p._id}`}
+                    src={`https://ecommerce-api-bay-three.vercel.app/api/v1/products/product-photo/${p._id}`}
                     className="card-img-top cardsImg"
 
                     alt="..."
