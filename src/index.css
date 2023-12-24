@@ -1,13 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@700&family=Poppins:wght@300;400&display=swap');
 *{
   margin: 0;
-
   padding: 0;
 }
 
 body{
   box-sizing: border-box;
-  overflow-x:hidden;
+  /* overflow-x:hidden; */
   position: relative;
   min-height: 100vh;
 }
