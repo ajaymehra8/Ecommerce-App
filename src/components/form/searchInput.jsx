@@ -11,7 +11,7 @@ const SearchInput = () => {
   const handleClick=async(e)=>{
 e.preventDefault();
 try{
-const {data}=await axios.get(`https://ecommerce-api-bay-three.vercel.app/api/v1/products/search/${values.keyword}`);
+const {data}=await axios.get(`https://ecommerce-api-tau-eight.vercel.app/api/v1/products/search/${values.keyword}`);
 setValues({...values,result:data});
 navigate("/search")
 }catch(error){
