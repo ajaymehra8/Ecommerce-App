@@ -20,7 +20,7 @@ const UserDashboard = () => {
           aria-expanded={!isCollapsed}
           aria-controls="dashboardContent"
         >
-{isCollapsed?"See ⬇":"❌"}
+{isCollapsed?"⬇":"❌"}
         </button>
       
       <div id="dashboardContent" className={`collapse dashContent ${isCollapsed ? '' : 'show'}`}>
