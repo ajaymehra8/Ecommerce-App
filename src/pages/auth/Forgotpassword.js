@@ -19,7 +19,7 @@ const ForgotPassword = () => {
   const handleSubmit=async(e)=>{
     e.preventDefault();
     try{
-    const res= await axios.post(`https://ecommerce-api-bay-three.vercel.app/api/v1/auth/forgot-password`,
+    const res= await axios.post(`https://ecommerce-api-tau-eight.vercel.app/api/v1/auth/forgot-password`,
     {email,newPassword,question});
     if(res.data.success){
       

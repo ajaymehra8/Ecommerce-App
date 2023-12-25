@@ -20,7 +20,7 @@ const [cart, setCart] = useCart();
               <>
                 <div className="card m-2 homeCards" >
                   <img
-                    src={`https://ecommerce-api-bay-three.vercel.app/api/v1/products/product-photo/${p._id}`}
+                    src={`https://ecommerce-api-tau-eight.vercel.app/api/v1/products/product-photo/${p._id}`}
                     className="card-img-top cardsImg"
                     alt="..."
                   />

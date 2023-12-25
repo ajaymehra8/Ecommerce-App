@@ -24,7 +24,7 @@ const Createproduct = () => {
 
   const getAllCategory = async () => {
     try {
-      const { data } = await axios.get("https://ecommerce-api-bay-three.vercel.app/api/v1/category/categories");
+      const { data } = await axios.get("https://ecommerce-api-tau-eight.vercel.app/api/v1/category/categories");
       if (data?.success) {
         setCategories(data?.category);
       }
@@ -53,7 +53,7 @@ const handleCreate = async (e) => {
   
       console.log(productData);
   
-      const { data } = await axios.post("https://ecommerce-api-bay-three.vercel.app/api/v1/products/create-product", productData, {
+      const { data } = await axios.post("https://ecommerce-api-tau-eight.vercel.app/api/v1/products/create-product", productData, {
         headers: {
           Authorization: auth[0]?.token, // Assuming your JWT is stored in auth.token
           // Include any other headers you need

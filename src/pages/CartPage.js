@@ -48,7 +48,7 @@ const CartPage = () => {
 
 const getToken=async()=>{
   try{
-const {data}=await axios.get("https://ecommerce-api-bay-three.vercel.app/api/v1/products/braintree/token");
+const {data}=await axios.get("https://ecommerce-api-tau-eight.vercel.app/api/v1/products/braintree/token");
 
 setClientToken(data?.clientToken);
 
@@ -70,7 +70,7 @@ const handlePayments=async()=>{
     setLoading(true);
     
     const { nonce } = await instance.requestPaymentMethod();
-const {data}=axios.post("https://ecommerce-api-bay-three.vercel.app/api/v1/products/braintree/payment",{
+const {data}=axios.post("https://ecommerce-api-tau-eight.vercel.app/api/v1/products/braintree/payment",{
   nonce,cart
 });
 setLoading(false);
@@ -109,7 +109,7 @@ toast.success("Payment completed");
               <div className="row mb-2 card flex-row p-3">
                 <div className="col-md-4">
                   <img
-                    src={`https://ecommerce-api-bay-three.vercel.app/api/v1/products/product-photo/${p._id}`}
+                    src={`https://ecommerce-api-tau-eight.vercel.app/api/v1/products/product-photo/${p._id}`}
                     className="card-img-top"
                     alt="..."
                     width={"100px"}
