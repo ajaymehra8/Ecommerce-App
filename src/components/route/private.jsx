@@ -10,7 +10,7 @@ const [auth,setAuth]=useAuth();
 
 useEffect(()=>{
     const authCheck=async()=>{
-const res=await axios.get("https://ecommerce-api-bay-three.vercel.app/api/v1/auth/user-auth",
+const res=await axios.get("https://ecommerce-api-tau-eight.vercel.app/api/v1/auth/user-auth",
 {
     headers:{
         "Authorization":auth?.token,

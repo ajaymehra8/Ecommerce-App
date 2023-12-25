@@ -5,7 +5,7 @@ export default function useCategory(){
     //get cat
     const getCategories=async()=>{
         try{
-const {data}=await axios.get("https://ecommerce-api-bay-three.vercel.app/api/v1/category/categories");
+const {data}=await axios.get("https://ecommerce-api-tau-eight.vercel.app/api/v1/category/categories");
 setCategory(data?.category);
         }catch(error){
             console.log(error);
