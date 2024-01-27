@@ -107,7 +107,7 @@ const handleCreate = async (e) => {
                   {photo ? photo.name : "Upload Photo"}
                   <input
                     type="file"
-                    name="phot"
+                    name="photo"
                     accept="image/*"
                     onChange={(e) => {
                       setPhoto(e.target.files[0]);
