@@ -44,12 +44,12 @@ const App = () => {
 
         <Route path="/dashboard/admin" element={<AdminRoute />}>
           <Route index element={<AdminDashboard />} />
-          <Route path="admin/orders" element={<AdminOrder />} />
-          <Route path="admin/create-category" element={<Createcategory />} />
-          <Route path="admin/create-product" element={<Createproduct />} />
-          <Route path="admin/products/product/:slug" element={<UpdateProduct />} />
-          <Route path="admin/products" element={<Products />} />
-          <Route path="admin/users" element={<AdminUsers />} />
+          <Route path="/orders" element={<AdminOrder />} />
+          <Route path="/create-category" element={<Createcategory />} />
+          <Route path="/create-product" element={<Createproduct />} />
+          <Route path="/products/product/:slug" element={<UpdateProduct />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/users" element={<AdminUsers />} />
         </Route>
 
         <Route path="/register" element={<Register />} />
