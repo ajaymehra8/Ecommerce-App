@@ -48,13 +48,12 @@ const AdminOrder = () => {
   return (
     <Layout>
       <div className="row ">
-        <div >
+          <div >
           <AdminMenu />
         </div>
         <div className="col-md-8 adminViews">
           <h1 className="text-center">All Orders</h1>
-          {orders?.map((o, i) => {
-            console.log(o.products);
+          {orders?.length>0 && orders?.map((o, i) => {
             return (
               <>
                 <div className="border">
@@ -86,7 +85,7 @@ const AdminOrder = () => {
                             ))}
                           </Select>
                         </td>
-                        <td>{o.buyer.name}</td>
+                        <td>{o?.buyer?.name}</td>
                         <td>{moment(o.createdAt).fromNow()}</td>
                         <td>{o.payment.success ? "Success" : "Fail"}</td>
                         <td>{o.products.length}</td>
@@ -101,7 +100,7 @@ const AdminOrder = () => {
                         <div className="row mb-2 card flex-row p-3">
                           <div className="col-md-4">
                             <img
-                              src={`/api/v1/products/product-photo/${p._id}`}
+                              src={`https://ecommerce-api-tau-eight.vercel.app/api/v1/products/product-photo/${p._id}`}
                               className="card-img-top"
                               alt="..."
                               width={"100px"}
